@@ -1,10 +1,17 @@
 main {
   .home {
     position: relative;
-    padding-bottom: 10%;
 
     div {
       @include wrap(50vw, 800px);
+
+      @include respond-to(768px) {
+        width: 65vw;
+      }
+
+      @include respond-to($max-width: 425px) {
+        width: 85vw;
+      }
 
       img {
         width: 100%;
@@ -13,10 +20,6 @@ main {
       p {
         padding: 10px 8% 20px 8%;
         font-size: 1.1em;
-      }
-
-      @include respond-to(768px) {
-        width: 65vw;
       }
     }
 
@@ -32,22 +35,21 @@ main {
     background: $secondary-color;
 
     .feature-list {
-      @include wrap(70vw);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-row-gap: 60px;
       justify-content: space-around;
-
-      p {
-        width: 350px;
-      }
-
+      @include wrap(70vw);
       @include respond-to(1024px) {
         @include wrap(90vw);
       }
 
       @include respond-to(768px) {
         grid-template-columns: 1fr;
+      }
+
+      p {
+        max-width: 350px;
       }
     }
   }
@@ -168,7 +170,7 @@ main {
         width: 100%;
       }
 
-      input[type="email"] {
+      input[type='email'] {
         height: 50px;
         width: 100%;
 

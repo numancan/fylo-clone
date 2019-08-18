@@ -1,7 +1,3 @@
-@mixin showBorder {
-  border: 1px solid aquamarine;
-}
-
 @mixin wrap($width, $max-width: 1920px) {
   max-width: $max-width;
   margin: 0 auto;
@@ -10,7 +6,7 @@
 
 @mixin underline($width) {
   display: block;
-  content: "";
+  content: '';
   border-bottom: 2px solid $hover-color;
   padding: 1px 0;
   width: $width;

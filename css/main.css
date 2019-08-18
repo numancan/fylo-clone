@@ -64,17 +64,17 @@ input {
   text-align: center;
 }
 
-.headling-lg {
+.heading-lg {
   font-size: 2em;
   padding: 10px 0 15px 0;
 }
 
-.headling-m {
+.heading-m {
   font-size: 1.2em;
   padding: 8px 0 10px 0;
 }
 
-.headling-sm {
+.heading-sm {
   font-size: 0.9em;
 }
 
@@ -100,15 +100,21 @@ input {
 }
 
 header {
+  padding: 60px 0;
   max-width: 1920px;
   margin: 0 auto;
   width: 90%;
-  padding: 60px 0;
 }
 
 @media only screen and (max-width: 512px) {
   header .logo {
     width: 110px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  header .logo {
+    width: 90px;
   }
 }
 
@@ -134,7 +140,7 @@ header .nav a {
 
 header .nav a::after {
   display: block;
-  content: "";
+  content: '';
   border-bottom: 2px solid #5cd8d8;
   padding: 1px 0;
   width: 0;
@@ -148,13 +154,24 @@ header .nav a:hover::after {
 
 main .home {
   position: relative;
-  padding-bottom: 10%;
 }
 
 main .home div {
   max-width: 800px;
   margin: 0 auto;
   width: 50vw;
+}
+
+@media only screen and (max-width: 768px) {
+  main .home div {
+    width: 65vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  main .home div {
+    width: 85vw;
+  }
 }
 
 main .home div img {
@@ -164,12 +181,6 @@ main .home div img {
 main .home div p {
   padding: 10px 8% 20px 8%;
   font-size: 1.1em;
-}
-
-@media only screen and (max-width: 768px) {
-  main .home div {
-    width: 65vw;
-  }
 }
 
 main .home .bg-curvy {
@@ -184,9 +195,6 @@ main .features {
 }
 
 main .features .feature-list {
-  max-width: 1920px;
-  margin: 0 auto;
-  width: 70vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -194,10 +202,9 @@ main .features .feature-list {
   grid-row-gap: 60px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-main .features .feature-list p {
-  width: 350px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 70vw;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -213,6 +220,10 @@ main .features .feature-list p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+main .features .feature-list p {
+  max-width: 350px;
 }
 
 main .banner {
@@ -271,7 +282,7 @@ main .banner a img {
 
 main .banner a::after {
   display: block;
-  content: "";
+  content: '';
   border-bottom: 2px solid #5cd8d8;
   padding: 1px 0;
   width: 100%;
@@ -409,7 +420,7 @@ main .sign-in .inner .email {
   }
 }
 
-main .sign-in .inner input[type="email"] {
+main .sign-in .inner input[type='email'] {
   height: 50px;
   width: 100%;
   border-radius: 25px;
@@ -418,7 +429,7 @@ main .sign-in .inner input[type="email"] {
 }
 
 @media only screen and (max-width: 768px) {
-  main .sign-in .inner input[type="email"] {
+  main .sign-in .inner input[type='email'] {
     margin-right: 0;
   }
 }

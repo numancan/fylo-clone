@@ -1,10 +1,14 @@
 header {
-  @include wrap(90%);
   padding: 60px 0;
+  @include wrap(90%);
 
   .logo {
     @include respond-to(512px) {
       width: 110px;
+    }
+
+    @include respond-to(330px) {
+      width: 90px;
     }
   }
 
