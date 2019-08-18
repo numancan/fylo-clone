@@ -497,22 +497,21 @@ footer .under-logo .contact img {
 }
 
 footer .under-logo .footer-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 110px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px)[2];
+      grid-template-columns: repeat(2, 100px);
+  grid-column-gap: 10px;
+  grid-auto-rows: 40px;
 }
 
 @media only screen and (max-width: 768px) {
   footer .under-logo .footer-nav {
-    margin: 100px 0;
+    padding: 70px 0;
+    -ms-grid-columns: 100px;
+        grid-template-columns: 100px;
+    grid-auto-rows: 20px;
+    grid-row-gap: 10px;
   }
 }
 
