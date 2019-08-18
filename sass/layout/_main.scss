@@ -1,0 +1,186 @@
+main {
+  .home {
+    position: relative;
+    padding-bottom: 10%;
+
+    div {
+      @include wrap(50vw, 800px);
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        padding: 10px 8% 20px 8%;
+        font-size: 1.1em;
+      }
+
+      @include respond-to(768px) {
+        width: 65vw;
+      }
+    }
+
+    .bg-curvy {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+    }
+  }
+
+  .features {
+    background: $secondary-color;
+
+    .feature-list {
+      @include wrap(70vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 60px;
+      justify-content: space-around;
+
+      p {
+        width: 350px;
+      }
+
+      @include respond-to(1024px) {
+        @include wrap(90vw);
+      }
+
+      @include respond-to(768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .banner {
+    @include wrap(90%);
+    display: flex;
+    align-items: center;
+
+    @include respond-to(1024px) {
+      @include wrap(92%);
+    }
+
+    @include respond-to(512px) {
+      flex-direction: column;
+      @include wrap(80%);
+    }
+
+    & > img {
+      width: 50%;
+      margin-right: 40px;
+
+      @include respond-to(512px) {
+        width: 80%;
+      }
+    }
+
+    a {
+      color: $hover-color;
+      display: inline-block;
+      margin-top: 26px;
+
+      img {
+        position: relative;
+        top: 3px;
+      }
+
+      &::after {
+        @include underline(100%);
+      }
+    }
+  }
+
+  .quotes {
+    @include wrap(90%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+
+    @include respond-to(512px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quote {
+      background: #21293c;
+      width: 31%;
+      padding: 40px 10px 0 20px;
+      border-radius: 5px;
+      filter: $drop-shadow;
+
+      @include respond-to(512px) {
+        width: 90%;
+        margin-bottom: 50px;
+      }
+
+      .quote-by {
+        padding: 30px 0;
+        img {
+          float: left;
+          border-radius: 50%;
+          width: 36px;
+          margin-right: 10px;
+        }
+        font-size: 0.8em;
+        color: rgba($text-color, 0.7);
+        p {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .sign-in {
+    background: $footer-gradient;
+    position: relative;
+    margin-top: 200px;
+
+    .inner {
+      @include center-translate;
+      background: #1c2230;
+      border-radius: 15px;
+      filter: $drop-shadow;
+      width: 50%;
+      padding: 30px 10%;
+
+      display: flex;
+      justify-content: space-around;
+
+      @include respond-to(1280px) {
+        width: 80%;
+      }
+
+      .email {
+        @include center(row);
+        @include respond-to(768px) {
+          @include center(column);
+        }
+
+        width: 100%;
+      }
+
+      input[type="email"] {
+        height: 50px;
+        width: 100%;
+
+        border-radius: 25px;
+        text-indent: 40px;
+
+        margin: 20px 30px 20px 0;
+
+        @include respond-to(768px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

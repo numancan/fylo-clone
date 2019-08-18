@@ -1,0 +1,40 @@
+@mixin showBorder {
+  border: 1px solid aquamarine;
+}
+
+@mixin wrap($width, $max-width: 1920px) {
+  max-width: $max-width;
+  margin: 0 auto;
+  width: $width;
+}
+
+@mixin underline($width) {
+  display: block;
+  content: "";
+  border-bottom: 2px solid $hover-color;
+  padding: 1px 0;
+  width: $width;
+}
+
+@mixin center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  text-align: center;
+  @if ($direction == row) {
+    justify-content: space-between;
+  }
+}
+
+@mixin center-translate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond-to($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}

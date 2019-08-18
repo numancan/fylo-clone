@@ -1,0 +1,14 @@
+$primary-color: #1c2230;
+$secondary-color: #181f2b;
+$text-color: #f0f3f8;
+$hover-color: #5cd8d8;
+$footer-color: #0c1524;
+
+$drop-shadow: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+$footer-gradient: linear-gradient(
+  to bottom,
+  $secondary-color 0,
+  $secondary-color 60%,
+  $footer-color 60%,
+  $footer-color 100%
+);

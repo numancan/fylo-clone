@@ -1,0 +1,36 @@
+header {
+  @include wrap(90%);
+  padding: 60px 0;
+
+  .logo {
+    @include respond-to(512px) {
+      width: 110px;
+    }
+  }
+
+  .nav {
+    display: flex;
+
+    li {
+      padding: 0 26px;
+      @include respond-to(768px) {
+        padding: 0 5px;
+      }
+    }
+
+    a {
+      opacity: 0.9;
+
+      &::after {
+        @include underline(0);
+        transition: width 0.2s;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
